@@ -2,5 +2,8 @@
 <% @todos.each do |todo| %>
 <p>
   <%= todo.description %>
+  <%= button_to 'Delete', todo_path(todo.id), method: 'delete'%>
 </p>
 <%end%>
+
+<%= render partial: "new" %>

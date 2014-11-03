@@ -1,0 +1,11 @@
+<h2> Make a Todo! </h2>
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+<%= form_for :todo, url: todos_path do |f| %>
+<p>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+</p>
+<p> <%= f.submit "Submit" %> </p>
+<% end %>
